@@ -16,7 +16,9 @@ exporters:
   prometheus:
     endpoint: "0.0.0.0:8889"
     const_labels:
-      label1: spring
+      cluster: demo
+  prometheusremotewrite:
+    endpoint: "http://prometheus:9090/api/v1/write"
   otlp/tempo:
     endpoint: tempo:4317  # tempo container host and port
     tls:
@@ -66,11 +68,10 @@ extensions:
 service:
   extensions: [health_check, pprof, zpages]
   pipelines:
-    # for now we only interested about metrics...
     metrics:
       receivers: [otlp, spanmetrics]
       processors: [batch]
-      exporters: [prometheus]
+      exporters: [prometheus] # mudar para "prometheusremotewrite" para alterar o método de envio no pipeline
     traces:
       receivers: [otlp]
       processors: [batch]
