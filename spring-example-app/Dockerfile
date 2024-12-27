@@ -6,6 +6,6 @@ ENTRYPOINT java -javaagent:/opentelemetry-javaagent.jar \
                 -Dotel.traces.exporter=otlp \
                 -Dotel.metrics.exporter=otlp \
                 -Dotel.logs.exporter=otlp \
-                -Dotel.exporter.otlp.endpoint=http://host.docker.internal:4318 \
+                -Dotel.exporter.otlp.endpoint=http://collector:4318 \
                 -Dotel.service.name=spring-example-app \
                 -jar /spring-example-app.jar
