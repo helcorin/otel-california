@@ -1,26 +1,26 @@
 version: '3'
 services:
-  app:
-    container_name: graalvm-app
-    image: fiaplabs/graalvm-app
-    environment:
-      OTEL_SERVICE_NAME: "graalvm-app"
-      OTEL_EXPORTER_OTLP_ENDPOINT: "http://collector:4318"
-    ports:
-      - "8080:8080"
-    depends_on:
-      - collector
-
 #  app:
-#    container_name: spring-app
-#    image: fiaplabs/spring-app
+#    container_name: graalvm-app
+#    image: fiaplabs/graalvm-app
 #    environment:
-#      OTEL_SERVICE_NAME: "spring-app"
+#      OTEL_SERVICE_NAME: "graalvm-app"
 #      OTEL_EXPORTER_OTLP_ENDPOINT: "http://collector:4318"
 #    ports:
 #      - "8080:8080"
 #    depends_on:
 #      - collector
+
+  app:
+    container_name: spring-app
+    image: fiaplabs/spring-app
+    environment:
+      OTEL_SERVICE_NAME: "spring-app"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://collector:4318"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - collector
       
   collector:
     container_name: collector

@@ -13,10 +13,6 @@ processors:
 exporters:
   logging:
     loglevel: debug
-  prometheus:
-    endpoint: "0.0.0.0:8889"
-    const_labels:
-      cluster: demo
   prometheusremotewrite:
     endpoint: "http://prometheus:9090/api/v1/write"
   otlp/tempo:
@@ -71,7 +67,7 @@ service:
     metrics:
       receivers: [otlp, spanmetrics]
       processors: [batch]
-      exporters: [prometheus] # mudar para "prometheusremotewrite" para alterar o método de envio no pipeline
+      exporters: [prometheusremotewrite] # mudar para "prometheusremotewrite" para alterar o método de envio no pipeline
     traces:
       receivers: [otlp]
       processors: [batch]
