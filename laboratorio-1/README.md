@@ -1,12 +1,10 @@
 # Laboratório 1
----
+
 ## Intro Otel
 
 **Conceito:**
 
 OpenTelemetry é um conjunto de ferramentas, APIs e SDKs open-source projetado para padronizar a coleta, geração e exportação de dados de observabilidade, como logs, métricas e traces. Ele permite monitorar aplicações distribuídas de forma eficiente, independentemente da linguagem de programação ou da infraestrutura utilizada. Com suporte a diversos backends, como Prometheus, Jaeger e Grafana, o OpenTelemetry ajuda equipes a obterem visibilidade unificada sobre seus sistemas, facilitando a detecção e resolução de problemas.
-
-*By ChatGPT*
 
 **Arquitetura:**
 
