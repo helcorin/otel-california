@@ -2,17 +2,17 @@
 
 Nesta etapa faremos algumas configurações na instância de onde partirá as automações dos laboratórios
 
-Após finalizar o processo anterior um terminal será exibido dentro do Cloud9, faça uma cópia do [repositório de configuração do ambiente](https://github.com/timelapalma/SextouNoOtel) da disciplina e em seguida execute o script de instalção das ferramentas que serão usadas durante os laboratórios:
+Após finalizar o processo anterior um terminal será exibido dentro do Cloud9, faça uma cópia do [repositório de configuração do ambiente](https://github.com/timelapalma/sextou-no-otel) da disciplina e em seguida execute o script de instalção das ferramentas que serão usadas durante os laboratórios:
 
 ## Ajuste de sizing da IDE:
 
 ```sh
 cd ~/environment
-git clone https://github.com/timelapalma/SextouNoOtel
+git clone https://github.com/timelapalma/sextou-no-otel
 
 # Execute o script de instalção das ferramentas que serão usadas durante os laboratórios:
-chmod +x ~/environment/SextouNoOtel/cloud9/scripts/resize.sh
-bash ~/environment/SextouNoOtel/cloud9/scripts/resize.sh
+chmod +x ~/environment/sextou-no-otel/cloud9/scripts/resize.sh
+bash ~/environment/sextou-no-otel/cloud9/scripts/resize.sh
 ```
 
 ## Instalação de Dependências:
@@ -39,7 +39,7 @@ mvn clean package
 A partir da raiz do projeto inicialize a stack de observability para os testes:
 
 ```sh
-cd ~/environment/SextouNoOtel/laboratorio[1..10] # Escolha conforme a etapa
+cd ~/environment/sextou-no-otel/laboratorio[1..10] # Escolha conforme a etapa
 docker-compose build
 docker-compose up
 ```

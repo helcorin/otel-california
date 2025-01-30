@@ -1,6 +1,6 @@
-# Laboratório 1
+# Intro, Open Telemetry
 
-## Intro Otel
+![alt tag](imagens/otel-logo.png)
 
 **Conceito:**
 
@@ -39,3 +39,9 @@ Consule a estrutura do Pipeline [Clicando aqui](https://www.otelbin.io/#config=*
 - Os exporters enviam os dados processados para diferentes destinos. As métricas são exportadas para o Prometheus na porta 8889, os traces são encaminhados para o Tempo via OTLP gRPC e também registrados no console via logging, enquanto os logs são enviados para o Loki por meio da API HTTP.
 
 Além disso a extensão [health_check](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/healthcheckextension/README.md) foi ativadas para fornecer funcionalidades de monitoramento da saúde do coletor.
+
+---
+
+Extras:
+
+Vídeo de referência do canal [Dose de Telemetria](https://www.youtube.com/@DoseDeTelemetria) com [Introdução ao Open Telemetry](https://www.youtube.com/watch?v=fuIHvIsd_lg&t=757s);
